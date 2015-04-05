@@ -1,0 +1,21 @@
+This is set of utilities and libraries for low-level and embedded ARM
+application development, focused on the STM32 microcontrollers.
+
+The primary utility is stlink-download, a stand-alone command line DUDE
+(download/upload/debug) utility for the STM STLink USB-JTAG interface,
+as found on the STM32VLDiscovery and related development boards.
+
+The support files include header and library files for a more efficient
+alternative to CMSIS and the commercial development systems. The header files
+encourage a direct-register-write programming style that largely
+eliminates the library call overhead for setting up devices, reducing
+code size and increasing speed.
+
+The run-time and linker support is similarly oriented to efficiency and
+unabstracted clarity. The only "frill" is enabling all device register
+clocks by default to eliminate the most common programming error with
+the STM32 series.
+
+This project was originally hoses on Google Code, with documentation
+integrated into their environment.  Some was dropped with the migration
+to Github.  It will be rewritten if there is interest.
